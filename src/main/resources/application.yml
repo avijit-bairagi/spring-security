@@ -1,0 +1,21 @@
+
+server.port: 8099
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=MY_DB
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: Dev1234!
+    hikari.maximumPoolSize: 20
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+# JWT Properties
+app.security.jwt:
+  secret: mySecretKey
+  expiration.in.ms: 86400000
+
+hibernate:
+  show:
+    sql: true
